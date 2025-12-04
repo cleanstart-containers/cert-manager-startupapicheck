@@ -4,7 +4,7 @@ The `startupapicheck` tool is a utility from cert-manager that verifies the avai
 
 **📌 CleanStart Foundation:** Security-hardened, minimal base OS designed for enterprise containerized environments.
 
-**Image Path:** `cleanstart/cert-manager-startupapicheck`
+**Image Path:** `ghcr.io/cleanstart-containers/cert-manager-startupapicheck`
 
 **Registry:** CleanStart Registry
 
@@ -41,7 +41,7 @@ CleanStart images are built on secure, minimal base operating systems and optimi
 - **User**: `clnstrt` (non-root, UID 1000)
 - **Architecture**: amd64
 - **OS**: Linux
-- **Image Tags**: `cleanstart/cert-manager-startupapicheck:latest-dev`
+- **Image Tags**: `ghcr.io/cleanstart-containers/cert-manager-startupapicheck:latest-dev`
 
 ---
 
@@ -77,15 +77,15 @@ Before using this container, ensure you have:
 
 Download the container image from the registry:
 ```bash
-docker pull cleanstart/cert-manager-startupapicheck:latest
-docker pull cleanstart/cert-manager-startupapicheck:latest-dev
+docker pull ghcr.io/cleanstart-containers/cert-manager-startupapicheck:latest
+docker pull ghcr.io/cleanstart-containers/cert-manager-startupapicheck:latest-dev
 ```
 
 ### Basic Run
 
 Run the container with basic configuration:
 ```bash
-docker run --rm cleanstart/cert-manager-startupapicheck:latest-dev
+docker run --rm ghcr.io/cleanstart-containers/cert-manager-startupapicheck:latest-dev
 ```
 
 **Note:** Running the container directly requires access to a Kubernetes cluster. The tool needs to connect to the Kubernetes API to perform checks.
@@ -94,7 +94,7 @@ docker run --rm cleanstart/cert-manager-startupapicheck:latest-dev
 
 View image details:
 ```bash
-docker inspect cleanstart/cert-manager-startupapicheck:latest-dev
+docker inspect ghcr.io/cleanstart-containers/cert-manager-startupapicheck:latest-dev
 ```
 
 ### Production Deployment
@@ -103,7 +103,7 @@ docker run -d --name cert-manager-startupapicheck-prod \
   --read-only \
   --security-opt=no-new-privileges \
   --user 1000:1000 \
-  cleanstart/cert-manager-startupapicheck:latest
+  ghcr.io/cleanstart-containers/cert-manager-startupapicheck:latest
 ```
 
 ---
@@ -153,8 +153,8 @@ CleanStart images support multiple architectures to ensure compatibility across 
 
 ### Architecture-based Pull Commands
 ```bash
-docker pull --platform linux/amd64 cleanstart/cert-manager-startupapicheck:latest
-docker pull --platform linux/arm64 cleanstart/cert-manager-startupapicheck:latest
+docker pull --platform linux/amd64 ghcr.io/cleanstart-containers/cert-manager-startupapicheck:latest
+docker pull --platform linux/arm64 ghcr.io/cleanstart-containers/cert-manager-startupapicheck:latest
 ```
 
 ---
